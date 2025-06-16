@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aixer.co – Creative Digital Agency</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aixer.co – Founders</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -37,11 +37,7 @@
             overflow-x: hidden;
         }
 
-        ::selection {
-            background: var(--primary);
-            color: var(--white);
-        }
-
+        /* Header Styles */
         header {
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(10px);
@@ -62,29 +58,9 @@
             background: rgba(10, 10, 10, 0.95);
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
         .logo img {
             height: 32px;
             transition: var(--transition);
-        }
-
-        header.scrolled .logo img {
-            height: 28px;
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 1.25rem;
-            background: linear-gradient(90deg, var(--primary), #FF6B30);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
         }
 
         nav {
@@ -121,239 +97,191 @@
             color: var(--primary);
         }
 
-        .hero {
-            padding: 12rem 5vw 8rem;
+        /* Founder Page Specific Styles */
+        .founder-hero {
+            padding: 12rem 5vw 6rem;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            background: radial-gradient(ellipse at top, rgba(255, 62, 48, 0.1) 0%, transparent 70%);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 62, 48, 0.08) 0%, rgba(10, 10, 10, 0) 70%);
-            z-index: -1;
-            animation: pulse 15s infinite alternate;
+        .founder-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5vw;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: translate(10%, 10%);
-            }
-
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            color: var(--text-gray);
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 1px solid var(--primary);
-            box-shadow: 0 4px 20px rgba(255, 62, 48, 0.3);
-        }
-
-        .cta-button:hover {
-            background: transparent;
-            color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 62, 48, 0.4);
-        }
-
-        .cta-button.outline {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--light);
-            box-shadow: none;
-            margin-left: 1rem;
-        }
-
-        .cta-button.outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: rgba(255, 62, 48, 0.1);
-        }
-
-        .section {
-            padding: 6rem 5vw;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: var(--white);
-        }
-
-        .section-subtitle {
-            font-size: 1rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .section-description {
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
-            color: var(--text-gray);
-            max-width: 600px;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
+        .founder-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 3rem;
+            margin: 4rem 0;
         }
 
-        .service-card {
+        .founder-card {
             background: var(--card);
-            border-radius: 16px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            overflow: hidden;
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
-            overflow: hidden;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 62, 48, 0.1), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
+        .founder-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 62, 48, 0.15);
             border-color: rgba(255, 62, 48, 0.3);
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon svg {
-            width: 24px;
-            height: 24px;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .service-card p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .portfolio-item {
-            border-radius: 16px;
-            overflow: hidden;
+        .founder-image {
+            width: 100%;
+            height: 300px;
             position: relative;
-            aspect-ratio: 4/3;
+            overflow: hidden;
         }
 
-        .portfolio-image {
+        .founder-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
 
-        .portfolio-overlay {
+        .founder-card:hover .founder-image img {
+            transform: scale(1.05);
+        }
+
+        .founder-badge {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--dark);
+            overflow: hidden;
+            background: var(--card);
+        }
+
+        .founder-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-content {
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .founder-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .founder-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .founder-bio {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .founder-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .founder-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .founder-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .founder-social svg {
+            width: 18px;
+            height: 18px;
+            color: var(--white);
+        }
+
+        .story-section {
+            background: var(--secondary);
+            border-radius: 24px;
+            padding: 5rem;
+            margin: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 62, 48, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-card::before {
+            content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 2rem;
-            background: linear-gradient(0deg, rgba(10, 10, 10, 0.9) 0%, transparent 100%);
-            opacity: 0;
+            height: 4px;
+            background: var(--primary);
             transition: var(--transition);
-            transform: translateY(20px);
         }
 
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-            transform: translateY(0);
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 62, 48, 0.1);
         }
 
-        .portfolio-item:hover .portfolio-image {
-            transform: scale(1.05);
+        .story-card:hover::before {
+            height: 6px;
         }
 
-        .portfolio-overlay h3 {
-            color: var(--white);
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-overlay p {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-
+        /* Footer Styles */
         .contact {
             background: var(--secondary);
             border-radius: 24px;
@@ -641,205 +569,149 @@
     <header id="header">
         <div class="logo">
             <img src="assets/AIXER-01.png" alt="Aixer Logo">
-            <!-- <span class="logo-text">aixer.co</span> -->
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Work</a>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Work</a>
             <a href="founders.html">Founders</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>We craft digital experiences that captivate and convert</h1>
-        <p>A design-led creative agency from Kerala specializing in brand identity, UI/UX, and digital products that
-            make an impact.</p>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-            <a href="#contact" class="cta-button">Start a project</a>
-            <a href="#services" class="cta-button outline">Our services</a>
+    <section class="founder-hero">
+        <div class="founder-container">
+            <span class="section-subtitle">Meet the visionaries</span>
+            <h1 class="section-title">The Minds Behind Aixer</h1>
+            <p class="section-description">Our founders combine creative vision with technical excellence to deliver
+                exceptional digital experiences.</p>
         </div>
     </section>
 
-    <section class="section" id="services">
-        <span class="section-subtitle">What we do</span>
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-description">We offer end-to-end creative solutions tailored to your brand's unique needs and
-            vision.</p>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
+    <div class="founder-container">
+        <div class="founder-grid">
+            <div class="founder-card">
+                <div class="founder-image">
+                    <img src="assets/saf.png" alt="Safvan background">
                 </div>
-                <h3>Brand Identity</h3>
-                <p>Comprehensive branding including logo design, color palettes, typography, and brand guidelines that
-                    tell your unique story.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
-                </div>
-                <h3>Packaging Design</h3>
-                <p>Eye-catching, sustainable packaging solutions that enhance shelf appeal while reflecting your brand
-                    values.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <h3>Social Media Ad</h3>
-                <p>Scroll-stopping creatives designed to captivate audiences and convert attention into action.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <h3>UI/UX Design</h3>
-                <p>Intuitive, beautiful interfaces designed with user psychology and conversion optimization in mind.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <h3>App Development</h3>
-                <p>Cross-platform mobile applications built with Flutter for exceptional performance and native feel.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-                    </svg>
-                </div>
-                <h3>Digital Marketing</h3>
-                <p>Data-driven strategies crafted to boost visibility, engagement, and long-term brand growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="portfolio">
-        <span class="section-subtitle">Our work</span>
-        <h2 class="section-title">Selected Projects</h2>
-        <p class="section-description">A curated selection of our recent work for innovative brands and startups.</p>
-
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="assets/cannlogic.png" alt="Project 1" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <h3>CANNLOGIC</h3>
-                    <p>Brand identity & packaging for premium herb brand</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item">
-                <img src="assets/genie.png" alt="Project 2" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <h3>GENIE Ai</h3>
-                    <p>UX design for Ai Assistant</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item">
-                <img src="assets/as.png" alt="Project 3" class="portfolio-image">
-                <div class="portfolio-overlay">
-                    <h3>QuizzyBea.in</h3>
-                    <p>Mobile app for knowledge assessment</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <span class="section-subtitle">Get in touch</span>
-        <h2 class="section-title">Let's create something amazing together</h2>
-        <p class="section-description">Have a project in mind? We'd love to hear about it.</p>
-
-        <div class="contact">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div>
-                        <h3>Our Office</h3>
-                        <p>Based in Kochi, Kerala, we work with clients worldwide to bring their creative visions to
-                            life.</p>
-                    </div>
-
-                    <div class="contact-details">
-                        <div class="contact-detail">
+                <!-- <div class="founder-badge">
+                    <img src="assets/saf.png" alt="Safvan VP">
+                </div> -->
+                <div class="founder-content">
+                    <h3 class="founder-name">Safvan VP</h3>
+                    <span class="founder-role">Flutter Developer & Marketing Manager</span>
+                    <p class="founder-bio">A passionate Flutter developer and digital designer with expertise in mobile
+                        app development, UI/UX design, and Firebase integration. Combines technical skills with creative
+                        vision to build engaging digital experiences that drive user engagement.</p>
+                    <div class="founder-social">
+                        <a href="https://www.linkedin.com/in/safvan-vp-211004262/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                             </svg>
-                            <span>+91 9526408939</span>
-                        </div>
-
-                        <div class="contact-detail">
+                        </a>
+                        <a href="https://github.com/Safvanvp" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                             </svg>
-                            <span>safvans153@gmail.com</span>
-                        </div>
-
-                        <div class="contact-detail">
+                        </a>
+                        <a href="https://www.instagram.com/_.safvan.vp/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span>Kochi, Kerala, India</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <form class="contact-form" action="mailto:safvans153@gmail.com" method="POST" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+            <div class="founder-card">
+                <div class="founder-image">
+                    <img src="assets/sha.png" alt="shefeeq background">
+                </div>
+
+                <div class="founder-content">
+                    <h3 class="founder-name">Shefeeq</h3>
+                    <span class="founder-role">Creative Head</head></span>
+                    <p class="founder-bio">With 10+ years in software architecture, Shefeeq ensures our technical
+                        solutions
+                        are robust, scalable, and future-proof while maintaining elegant simplicity in execution.</p>
+                    <div class="founder-social">
+                        <a href="https://www.instagram.com/sxafeeq/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                            </svg>
+                        </a>
+                        <a href="https://www.behance.net/shafeeqx" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/alex" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </a>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="founder-container">
+        <div class="story-section">
+            <span class="section-subtitle">Our Story</span>
+            <h2 class="section-title">From Different Paths to a Shared Creative Vision</h2>
+            <p class="section-description">
+                We were three individuals from very different backgrounds, brought together not by circumstance, but by
+                a shared curiosity and love for design. Our journey began at a design institute, where we discovered a
+                synergy that turned learning into collaboration.
+            </p>
+
+            <div class="story-grid">
+                <div class="story-card">
+                    <h3>The Spark</h3>
+                    <p>Coming from diverse fields, we met at a design institute where we connected over a mutual
+                        interest in creativity, storytelling, and visual design.</p>
+                </div>
+                <div class="story-card">
+                    <h3>2022</h3>
+                    <p>We began our journey together—exploring UI/UX, visual branding, and digital tools. Studio
+                        projects and late-night brainstorming helped shape our shared approach.</p>
+                </div>
+                <div class="story-card">
+                    <h3>2023</h3>
+                    <p>Each of us found a niche: one immersed in Flutter development, while the others honed their
+                        skills in UI/UX and visual design. Together, we worked on mockups, real projects, and design
+                        systems.</p>
+                </div>
+                <div class="story-card">
+                    <h3>2023–2024</h3>
+                    <p>We collaborated on internships and freelance projects—combining design and development to build
+                        cohesive, user-focused digital experiences.</p>
+                </div>
+                <div class="story-card">
+                    <h3>Today</h3>
+                    <p>Two of us continue as passionate designers, while one has evolved into a Flutter developer. What
+                        unites us is the same drive that started it all: building purposeful, user-first digital
+                        products.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="footer-content">
@@ -926,15 +798,36 @@
             }
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Founder card hover animation
+        const founderCards = document.querySelectorAll('.founder-card');
+        founderCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const image = card.querySelector('.founder-image img');
+                image.style.transform = 'scale(1.05)';
             });
+
+            card.addEventListener('mouseleave', () => {
+                const image = card.querySelector('.founder-image img');
+                image.style.transform = 'scale(1)';
+            });
+        });
+
+        // Story card animation on scroll
+        const storyCards = document.querySelectorAll('.story-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        storyCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `all 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.1}s`;
+            observer.observe(card);
         });
     </script>
 </body>
